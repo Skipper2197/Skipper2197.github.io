@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seals in Sweden – Visualizations</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>Visualizations</h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Project Overview</a></li>
+            <li><a href="visuals.html">Visualizations</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section>
+            <h3>Where are these seal species located in Sweden?</h3>
+
+            <iframe src="seal_counts_2016_map_sweden.html" class="viz-frame-single" frameborder="0"></iframe>
+            <h2>Interactivity Features</h2>
+            <ul>
+            <li>Scroll to zoom in or out</li>
+            <li>Hover to see the region occupied by seals</li>
+            <li>Click on a region to expand it and see more detailed clustering information</li>
+            </ul>
+
+            <h2>Analysis</h2>
+            <p>High-density clusters (orange) indicate areas with many observations, while green represents few points. Ringed seals are concentrated in the northern Gulf of Bothnia and 
+                along the southern west coast, suggesting that these regions provide favorable habitat and prey availability. Harbor seals appear in smaller, scattered clusters near Stockholm 
+                and northern coasts, indicating lower but present populations, while grey seals are localized in a few northern and central coastal areas, reflecting their more restricted habitat. 
+                Overall, seal populations are not evenly distributed but instead cluster in regions that support their ecological needs. These patterns highlight areas where conservation and 
+                monitoring efforts should be prioritized to support recovery and inform sustainable fishery and habitat management in the Baltic Sea.</p>
+        </section>
+
+        <section>
+            <h3>Seal Counts Over Time (1995-2016)</h3>
+            <img src="seal_counts_timeline_up_to2016.png" class="viz-frame-single" alt="Seal Counts Timeline">
+            <h2>Analysis</h2>
+            <p>All of the species experienced an increase from 1995 compared to 2016, however the increase over time is not entirely smooth or linear. There are many spikes in the data, 
+                specifically for the grey seals, where the populations are frequently found fluctuating. The harbor and ringed seals population growth also fluctuates a bit over time, 
+                but the spikes in data are more stable compared to the grey seals. Ultimately, these trends indicate that the seal recovery was not a steady process, and that many external 
+                factors may have influenced these trends. Looking at these trends allows us to identify potential issues that are individual to a species.</p>
+        </section>
+
+        <section>
+            <h3>Sighting Trends From 1995 to 2016</h3>
+            <img src="1995to2016BarChart_withGrey.png" alt="Sighting Trends by Year" class="viz-frame-single">
+            <h2>Analysis</h2>
+            <p>The blue bars represent the seal population counts in 1995. While the three species all differ in counts, it is apparent that all populations are relatively low during 
+                this time. Compared to the orange bars, which represent the populations in 2016, there is a clear increase that all species experienced some form of recovery as all 
+                populations increased. However, the recovery levels differ amongst species, with the harbor seals having the highest increase, compared to the grey seals having the lowest 
+                increase. This is significant as it highlights the differences between species, emphasizing the need for specific recovery strategies geared towards the different populations. </p>
+        </section>
+
+        <section>
+            <h3>Individual Seal Dispersion Through the Years (1995-2020)</h3>
+            <div class='tableauPlaceholder' id='viz1765647165053' style='position: relative'><noscript><a href='#'><img alt='Seal Populations Along Swedish Coast in 2012  ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3p&#47;3populations&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='3populations&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3p&#47;3populations&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1765647165053');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            <h2>Interactivity Features</h2>
+            <ul>
+            <li>Use the slider or buttons to navigate through the years</li>
+            </ul>
+            <h2>Analysis</h2>
+            <p>The map illustrates the distribution of harbor seals (green), grey seals (grey), and ringed seals (blue) along the Swedish coast. Unlike the high-density clusters 
+                highlighted in the first visualization, this map emphasizes individual observations, showing that harbor seals and grey seals often share the same coastal areas, 
+                particularly along the southwestern and southern coasts, suggesting overlapping habitat use. Ringed seals remain largely confined to the northern Baltic Sea near the 
+                Gulf of Bothnia, reflecting a more specialized habitat and a preference for a more protected environment. This spatial contrast provides insight into species-specific 
+                distribution patterns and can guide targeted conservation and monitoring strategies.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Seals in Sweden Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

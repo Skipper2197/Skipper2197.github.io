@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_09b8de4eb9a6fdbe8486fcd4291d389d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<h3 align="center" style="font-size:20px; color:darkblue">
+Seal Ranges in Sweden
+</h3>
+    
+            <div class="folium-map" id="map_09b8de4eb9a6fdbe8486fcd4291d389d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_09b8de4eb9a6fdbe8486fcd4291d389d = L.map(
+                "map_09b8de4eb9a6fdbe8486fcd4291d389d",
+                {
+                    center: [62.0, 15.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7f910e3326ddf4d7e9f789c1b0398687 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7f910e3326ddf4d7e9f789c1b0398687.addTo(map_09b8de4eb9a6fdbe8486fcd4291d389d);
+        
+    
+            var circle_081ec9cdf154bc3ef3388ed12fd5c39c = L.circle(
+                [57.83892618, 12.195959720000001],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 514571.5315044666, "stroke": true, "weight": 3}
+            ).addTo(map_09b8de4eb9a6fdbe8486fcd4291d389d);
+        
+    
+        var popup_518dc39ee619ae087d3900538f37887e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cdf2f6134736fa1b4b1a494bac52eff1 = $(`<div id="html_cdf2f6134736fa1b4b1a494bac52eff1" style="width: 100.0%; height: 100.0%;">Harbor Seal Range</div>`)[0];
+                popup_518dc39ee619ae087d3900538f37887e.setContent(html_cdf2f6134736fa1b4b1a494bac52eff1);
+            
+        
+
+        circle_081ec9cdf154bc3ef3388ed12fd5c39c.bindPopup(popup_518dc39ee619ae087d3900538f37887e)
+        ;
+
+        
+    
+    
+            circle_081ec9cdf154bc3ef3388ed12fd5c39c.bindTooltip(
+                `<div>
+                     Harbor Seal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_f203e9fc0ff83fb56756845b22580481 = L.circle(
+                [65.17056312000001, 23.743953799999996],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 332817.18062120694, "stroke": true, "weight": 3}
+            ).addTo(map_09b8de4eb9a6fdbe8486fcd4291d389d);
+        
+    
+        var popup_d5621c3648998b403eb3b3edd2486697 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4a9c02382ad065eeb1f8cfb458db0c74 = $(`<div id="html_4a9c02382ad065eeb1f8cfb458db0c74" style="width: 100.0%; height: 100.0%;">Ringed Seal Range</div>`)[0];
+                popup_d5621c3648998b403eb3b3edd2486697.setContent(html_4a9c02382ad065eeb1f8cfb458db0c74);
+            
+        
+
+        circle_f203e9fc0ff83fb56756845b22580481.bindPopup(popup_d5621c3648998b403eb3b3edd2486697)
+        ;
+
+        
+    
+    
+            circle_f203e9fc0ff83fb56756845b22580481.bindTooltip(
+                `<div>
+                     Ringed Seal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
