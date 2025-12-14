@@ -10,24 +10,23 @@ header {
   padding: 2rem;
   text-align: center;
 }
-/* nav {
-  background: #144a74;
-  padding: 1rem;
-  text-align: center;
+
+
+nav a:not(.active) {
+  opacity: 0.6;
 }
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: bold;
-} */
+
+main {
+  padding: 1rem;
+}
+
 main section {
   max-width: 900px;
   margin: 2rem auto;
   background: white;
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
 }
 h1, h2 {
   color: #0d3b66;
@@ -108,25 +107,18 @@ header h1 {
   background-color: #144a74;
   display: inline-block;
   margin-top: 1.5rem;
-  background: white;
-  color: #0d3b66;
+  color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
+  transition: 250ms;
 }
 .hero-btn:hover {
-    background-color: #144a74;
+    background-color: #206ca7;
     transform: translateY(-2px);
 }
-.navbar {
-  background: #144a74;
-  padding: 1rem;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 /* Hamburger icon */
 .nav-toggle {
@@ -136,43 +128,125 @@ header h1 {
   z-index: 10;
 }
 
-/* Menu container (hidden by default) */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-
-  position: absolute;
-  top: 100%;                 /* directly below navbar */
-  left: 50%;
-  transform: translateX(-50%) translateY(-10px);
-
-  opacity: 0;
-  pointer-events: none;
-
-  transition: opacity 0.3s ease, transform 0.3s ease;
+/* nav {
+  background: #144a74;
+  padding: 1rem;
+  text-align: center;
 }
-
-/* Visible state */
-.nav-links.active {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
-}
-
-/* Button styling */
-.nav-links li a {
-  background-color: #144a74;
+nav a {
   color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
   text-decoration: none;
+  margin: 0 1rem;
   font-weight: bold;
-  white-space: nowrap;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
 }
 
-.nav-links li a:hover {
-  background-color: #2a82cf;
-  transform: translateY(-2px);
+nav a.active:before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #7bc2f9;
+}*/
+
+.navbar {
+  background: #144a74;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+
 }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Desktop styling */
+@media screen and (min-width: 601px) {
+  .navbar {
+    background: #144a74;
+    padding: 1rem;
+    text-align: center;
+  }
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .navbar a.active:before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #7bc2f9;
+  }
+
+  .navbar {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+
+
+/* Mobile styling */
+@media screen and (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+    align-items: center;
+  }
+  /* Menu container (hidden by default) */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+
+    position: absolute;
+    top: 100%;                 /* directly below navbar */
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Visible state */
+  .nav-links.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Button styling */
+  .nav-links li a {
+    background-color: #144a74;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .nav-links li a:hover {
+    background-color: #2a82cf;
+    transform: translateY(-2px);
+  }
+}
+
+
